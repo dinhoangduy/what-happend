@@ -32,12 +32,18 @@
 - Clone this project to your computer
 
 - Install dependencies
-    ```npm i 
+    ```
+        npm i 
+
     ```
     or
-    ```npm i  --force
+    ```
+        npm i  --force
+    
     ```
 - Run project
-    ```npm run dev 
+    ```
+        npm run dev 
+    
     ```
 - Enjoy 🥳
