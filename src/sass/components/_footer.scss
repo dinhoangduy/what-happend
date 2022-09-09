@@ -1,0 +1,148 @@
+.footer {
+    position: relative;
+    width: 100%;
+
+    .container {
+        padding: 49px 100px 115px 100px;
+    }
+
+    &__top {
+        @include flex(flex-start, space-between);
+        
+        margin-bottom: 60px;
+      
+        &__left {
+            &__title{
+                font-size: 14px;
+                color: $txt-black;
+                font-weight: 700;
+                margin-bottom: 30px;
+            }
+
+            &__content{
+                &__item{
+                    font-weight: 400;
+                    color:$txt-black;
+                    font-size: 1.4rem;
+                    line-height: 3rem;
+                }
+            }
+
+    
+        }
+
+        &__right{
+            
+            &__title{
+                font-size: 14px;
+                color: $txt-black;
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+            &__content{
+                &__item{
+                    font-weight: 100;
+                    color:$txt-black;
+                    font-size: 1.4rem;
+                    line-height: 3rem;
+                }
+            }
+        }
+
+     
+
+        @include medium-tablet {
+            flex-direction: column;
+
+            &__left {
+                width: 100%;
+                margin-bottom: 100px;
+               
+            }
+
+            &__right {
+                width: 100%;
+            }
+        }
+
+
+
+    }
+
+    &__bottom {
+        @include flex(center, space-between);
+
+        
+        &__copyright{
+            width: 50%;
+            font-size: 1.4rem;
+            color: $txt-greyish;
+        }
+
+        &__social {
+            @include flex(center,center);
+
+            &__item {
+                @include flex(center,center);
+
+                cursor: pointer;
+
+                svg {
+                    width: 23px;
+                }
+            }
+            &__item ~ &__item {
+                margin-left: 23px;
+            }
+        }
+
+
+        @include mobile {
+            flex-direction: column;
+            &__copyright{
+                width: 100%;
+            }
+        }
+    }
+
+    @include tablet {
+        .container {
+            padding: 49px 70px 115px 70px;
+        }
+    }
+
+    @include medium-tablet {
+        .container {
+            padding: 49px 50px 115px 50px;
+        }
+    }
+
+    @include mobile {
+        
+        .container {
+            padding: 49px 30px 115px 30px;
+        }
+
+        &__top {
+            &__left{
+                &__content {
+                    &__item {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+
+        &__bottom {
+            &__copyright{
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    @include sm-mobile {
+        .container {
+            padding: 49px 10px 115px 10px;
+        }
+    }
+}

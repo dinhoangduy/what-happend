@@ -1,0 +1,35 @@
+.coming-soon {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    color: white;
+
+    .content {
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    h1 {
+        letter-spacing: .2rem;
+        text-transform: uppercase;
+        background: black;
+        padding: 15px 20px;
+        margin: 0;
+    }
+
+    @include mobile {
+        font-size: 1.5rem;
+
+        .content {
+            padding: 0 10px;
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,154 @@
+.header {
+    width: 100%;
+    height: $header-height;
+    background-color: $black-bg;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all .3s ease;
+    z-index: 99;
+
+    &.shrink {
+        height: $header-shrink-height;
+        box-shadow: $box-shadow;
+    }
+
+    &-open {
+        display: none;
+
+        @include tablet {
+            display: block;
+            font-size: 3rem;
+            color: $txt-white;
+            cursor: pointer;
+        }
+    }
+
+    .container {
+        position: relative;
+
+        width: 100%;
+        height: 100%;
+
+        padding: 0 100px 0 120px;
+
+        @include flex(center, space-between);
+
+        @include tablet {
+            padding: 0 50px 0 60px;
+        }
+        
+        @include mobile {
+            padding: 0 30px 0 40px;
+
+        }
+    }
+
+    &__logo {
+        @include flex(center, center);
+
+        img {
+            height: 26px;
+
+            @include mobile{
+                height: 16px;
+            }
+        }
+    }
+
+    &__menu {
+        color: $txt-white;
+        transition: transform .3s ease;
+
+        @include flex(center, center);
+
+        &__break {
+            width: 2px;
+            height: 23px;
+            background-color: $pinkish-grey-bg;
+            margin: 0 50px;
+
+            @include tablet  {
+                margin: 30px 0;
+            }
+        }
+
+        &-close {
+            display: none;
+
+            @include tablet {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 30px;
+                font-size: 3rem;
+                color: $txt-white;
+                cursor: pointer;
+            }
+        }
+
+        &__left,
+        &__right {
+            @include flex(center, center);
+
+            @include tablet {
+                flex-direction: column;
+            }
+        }
+
+        &__item~&__item {
+            margin-left: 76px;
+            @include tablet {
+                margin-left: unset;
+            }
+        }
+
+        &__item {
+            font-size: 1.4rem;
+            line-height: 3rem;
+            text-transform: uppercase;
+            transition: color .3s ease;
+
+            &:hover {
+                color: $text-main-color;
+            }
+
+            &.active {
+                color: $text-main-color;
+            }
+
+            @include tablet {
+                margin-top: 30px;
+            }
+        }
+
+        &.active {
+            transform: translateX(0);
+        }
+
+        @include tablet {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: $black-bg;
+
+            flex-direction: column;
+            justify-content: flex-start;
+
+            transform: translateX(100%);
+        }
+    }
+
+
+    @include tablet {
+        height: $header-tablet-height;
+
+    }
+    @include mobile {
+        height: $header-mobile-height;
+    }
+
+    
+}

@@ -1,0 +1,339 @@
+.video {
+    width: 100%;
+    background-color: $white-bg;
+
+    .container {
+        padding: 148px 334px 393px;
+        position: relative;
+        @include flex(center, flex-start);
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    &__title {
+        font-size: 5rem;
+        letter-spacing: 10px;
+        font-weight: 800;
+        color: $txt-black;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+    }
+
+    &__description {
+        font-size: 2rem;
+        margin-bottom: 53px;
+        color: $txt-black;
+        font-weight: 300;
+        text-align: center;
+        width: 665px;
+    }
+
+    &__btn {
+        margin-bottom: 72px;
+    }
+
+    &__main {
+        width: 100%;
+        color: $txt-white;
+        border: 3px solid $black-bg;
+        z-index: 10;
+
+        &__header {
+            background-color: $dark-maroon-bg;
+            padding: 15px 20px;
+            @include flex(center, flex-start);
+
+            &__icon {
+                font-size: 2rem;
+                @include flex(center, center);
+                margin-right: 10px;
+            }
+
+
+            &__title {
+                font-size: 2.5rem;
+                text-transform: uppercase;
+                font-weight: 800;
+            }
+
+            &__vertical {
+                flex-grow: 3;
+                height: 13px;
+                border-top: 3px solid $white-bg;
+                border-bottom: 3px solid $white-bg;
+                margin: 0 37px 0 22px;
+            }
+
+            &__close {
+                font-size: 3rem;
+
+                @include flex(center, center);
+            }
+        }
+
+        &__bar {
+            padding: 9px 12px;
+            border-bottom: 3px solid $black-bg;
+            color: $txt-black;
+            background-color: $white-bg;
+
+            @include flex(center, space-between);
+
+            &__url {
+                font-size: 1.8rem;
+                font-weight: 800;
+                text-transform: uppercase;
+            }
+
+            &__foward {
+                font-size: 2.5rem;
+                font-family: "Noto Sans KR", sans-serif;
+                font-weight: 900;
+            }
+
+        }
+
+        &__video {
+            position: relative;
+            width: 100%;
+
+            iframe {
+                height: 612px !important;
+            }
+
+            &__preview {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    &__obj {
+        position: absolute;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        &__1 {
+            right: 1161px;
+            bottom: 147px;
+        }
+
+        &__2 {
+            right: 648px;
+            bottom: 276px;
+        }
+
+        &__3 {
+            right: 1551px;
+            bottom: 315px;
+        }
+
+        &__4 {
+            left: -200px;
+            bottom: 826px;
+        }
+
+        &__5 {
+            left: 226px;
+            top: 0;
+        }
+
+        &__6 {
+            right: 243px;
+            top: 270px;
+        }
+
+        &__7 {
+            right: 138px;
+            top: 156px;
+        }
+
+        &__8 {
+            right: -200px;
+            bottom: 241px;
+        }
+
+        &__9 {
+            right: -170px;
+            top: 656px;
+        }
+    }
+
+    &__btn__action {
+
+        &__item {
+            position: absolute;
+            @include flex(center, center);
+            border: 3px solid $black-bg;
+            border-radius: 50%;
+            padding: 9px;
+            background-color: $white-bg;
+            color: $black-bg;
+            font-size: 3rem;
+            cursor: pointer;
+            transition: all .3s ease;
+
+            &:hover {
+                box-shadow: 0px 0px 10px $blue-bg;
+            }
+
+            &-play {
+                bottom: 266px;
+                right: 141px;
+            }
+
+            &-pause {
+                bottom: 266px;
+                right: 80px;
+            }
+        }
+    }
+
+    @include medium-desktop {
+        .container {
+            padding: 148px 250px 393px;
+        }
+
+        &__obj {
+            display: none;
+        }
+
+        &__btn__action__item {
+            transform: translateX(50%);
+
+            &-play {
+                bottom: 266px;
+                right: calc(50% + 50px);
+            }
+
+            &-pause {
+                bottom: 266px;
+                right: calc(50% - 50px);
+            }
+        }
+    }
+
+    @include tablet {
+        .container {
+            padding: 148px 150px 393px;
+        }
+    }
+
+    @include large-tablet {
+        .container {
+            padding: 148px 100px 393px;
+        }
+
+        &__title {
+            font-size: 4rem;
+            text-align: center;
+        }
+
+        &__description {
+            font-size: 1.7rem;
+            width: 100%;
+            line-height: 20px;
+        }
+    }
+
+    @include medium-tablet {
+        .container {
+            padding: 148px 50px 393px;
+        }
+
+        &__title {
+            font-size: 3rem;
+        }
+
+        &__main {
+            &__video {
+
+                iframe {
+                    height: 450px !important;
+                }
+            }
+        }
+    }
+
+    @include mobile {
+        .container {
+            padding: 148px 30px 393px;
+        }
+
+        &__title {
+            font-size: 2.5rem;
+            letter-spacing: 3px;
+        }
+
+        &__main {
+            &__header {
+
+                padding: 3px;
+                &__title {
+                    font-size: 0.7rem;
+                }
+
+                &__icon {
+                    font-size: 1rem;
+                }
+
+                &__vertical {
+                    height: 8px;
+                    border-top: 2px solid #fff;
+                    border-bottom: 3px solid #fff;
+                    margin: 0 5px;
+                }
+
+                &__close {
+                    font-size: 2rem;
+                }
+            }
+
+            &__bar {
+                padding: 3px 6px;
+                &__url {
+                    font-size: 0.8rem;
+                }
+
+                &__foward{
+                    font-size: 1.5rem;
+                }
+            }
+
+
+            &__video {
+
+                iframe {
+                    height: 300px !important;
+                }
+            }
+        }
+    }
+
+    @include sm-mobile {
+        .container {
+            padding: 68px 10px 393px;
+        }
+
+        &__main {
+            &__video {
+
+                iframe {
+                    height: 200px !important;
+                }
+            }
+        }
+    }
+}

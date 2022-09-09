@@ -1,0 +1,280 @@
+.story {
+    position: relative;
+    width: 100%;
+    background-color: $blue-bg;
+    overflow: hidden;
+
+    .container {
+        padding: 150px 0 170px;
+        @include flex(center, center);
+        flex-direction: column;
+    }
+
+    &__obj {
+        position: absolute;
+        z-index: 1;
+
+        &__1 {
+            top: 233px;
+            left: 190px;
+        }
+
+        &__2{
+            right: 256px;
+            top: 61px;
+        }
+        &__3{
+            top: 148px;
+            right: 165px;
+        }
+        &__4{
+            top: 271px;
+            right: -40px;
+        }
+        &__5{
+            bottom: 185px;
+            right: -10px;
+        }
+
+        &__6{
+            bottom: 185px;
+            left: 0;
+        }
+        &__7{
+            bottom: 185px;
+            left: 190px;
+        }
+        &__line{
+            width: 100%;
+            height: 3px;
+            background-color: $black-bg;
+            bottom:190px;
+            left: 0;
+        }
+    }
+
+    &__title {
+        color: $txt-sun-yellow;
+        font-size: 4.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    &__description {
+        color: $txt-sun-yellow;
+        font-size: 1.6rem;
+        font-family: 'Noto Sans KR', sans-serif;
+        width: 682px;
+        text-align: center;
+        font-weight: 300;
+        line-height: 30px;
+        margin-bottom: 100px;
+    }
+
+    &__main {
+        z-index: 2;
+        @include flex(center, center);
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 9px;
+            width: 95%;
+            top: 7px;
+            left: 50%;
+            background-color: $dark-maroon-bg;
+            border-top: 1.5px solid $blue-bg;
+            border-bottom: 1.5px solid $blue-bg;
+            z-index: 1000;
+            transform: translateX(-50%);
+        }
+
+        &__image {
+            width: 600px;
+            height: 488px;
+            overflow: hidden;
+            background-color: $orange-bg;
+            border: 3px solid $dark-maroon-bg;
+            padding: 30px 0;
+            border-top: 24px solid $dark-maroon-bg;
+            border-right: 1.5px solid $dark-maroon-bg;
+
+            @include flex(center, center);
+            flex-direction: column;
+
+            p {
+                text-transform: uppercase;
+                font-size: 2.5rem;
+                font-weight: 600;
+                margin-bottom: 30px;
+            }
+
+            img {
+                width: 70%;
+                height: 70%;
+            }
+        }
+
+        &__content {
+            width: 600px;
+            height: 488px;
+            background-color: $white-bg;
+            padding: 63px 68px 54px 45px;
+            border: 3px solid $dark-maroon-bg;
+            border-top: 24px solid $dark-maroon-bg;
+            border-left: 1.5px solid $dark-maroon-bg;
+
+            &__title {
+                font-size: 2.2rem;
+                font-weight: 900;
+                color: $txt-black;
+                margin-bottom: 39px;
+                
+            }
+
+            &__description {
+                line-height: 30px;
+                font-size: 1.6rem;
+                font-family: "Noto Sans Kr", sans-serif;
+                font-weight: 200;
+                margin-bottom: 47px;
+            }
+
+
+        }
+    }
+
+    @include medium-desktop{
+        &__obj{
+            display: none;
+        }
+    }
+
+    @include tablet {
+        &__main {
+            flex-direction: column;
+
+            &__image {
+                border-right: 3px solid $dark-maroon-bg;
+            }
+
+            &__content {
+                border-top: none;
+                border-left: 3px solid $dark-maroon-bg;
+            }
+        }
+        
+
+    }
+
+    @include medium-tablet {
+        .container {
+            padding: 100px 0;
+        }
+
+        
+        &__description {
+            color: $txt-sun-yellow;
+            font-size: 1.6rem;
+            font-family: 'Noto Sans KR', sans-serif;
+            width: 80%;
+            text-align: center;
+            font-weight: 100;
+            line-height: 30px;
+            margin-bottom: 100px;
+        }
+
+        &__main {
+
+            &__content,
+            &__image {
+                width: 525px;
+            }
+        }
+    }
+
+    @include mobile {
+        .container {
+            padding: 70px 0;
+        }
+
+        &__main {
+            &::before{
+                width: 85%;
+            }
+
+            &__content,
+            &__image {
+                width: 90%;
+                border-width: 2px;
+                border-top-width: 24px;
+            }
+
+            &__image {
+                padding: 10px 0;
+                height: auto;
+
+                p {
+                    font-size: 1.7rem;
+                }
+            }
+
+            &__content {
+                padding: 40px 40px 54px 45px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: auto;
+
+                &__title{
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    @include sm-mobile {
+        .container {
+            padding: 50px 0;
+        }
+
+        &__main {
+            &::before{
+                width: 75%;
+            }
+            &__content,
+            &__image {
+                width: 80%;
+            }
+
+            &__image {
+                padding: 10px 0;
+                height: auto;
+
+                p {
+                    font-size: 1.7rem;
+                }
+            }
+
+            &__content {
+                padding: 40px 20px 54px 20px;
+
+                &__title {
+                    font-size: 1.7rem;
+                 
+                }
+
+                &__description {
+                    font-size: 1.5rem;
+                }
+
+                &__btn {
+                    font-size: 1.7rem;
+                }
+            }
+        }
+    }
+}

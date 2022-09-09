@@ -1,0 +1,52 @@
+// ** I also want to declare color variable like: primary, second,...
+//    But there are so many color and I can't declare variable flow this way
+
+
+$white-bg : #fff;
+$black-bg: #111;
+$pinkish-grey-bg: #ccc8c6;
+$main-bg: #fccb05;
+$tomato-bg: #ea4913;
+$pumpkin-orange-bg:#fa7b26;
+$orange-bg:#f96400;
+$blue-bg: #0565bb;
+$dark-maroon-bg:  #020001;
+
+
+$btn-bg-color: #fff;
+$btn-txt-color: #222222;
+
+$text-main-color: #fccb05;
+$txt-white: #fff;
+$txt-black: #111;
+$txt-greyish: #a9a9a9;
+$txt-tomato: #ea4913;
+$txt-orange: #f96400;
+$txt-pumpkin-orange:#fa7b26;
+$txt-sun-yellow:  #fcd32a;
+$txt-dark-brown: #110e03;
+
+$header-height: 80px;
+$header-tablet-height: 70px;
+$header-mobile-height: 60px;
+$header-shrink-height: 60px;
+
+$xl-desktop-width: 1800px;
+$medium-desktop-width: 1600px;
+$tablet-width: 1300px;
+$large-tablet-width: 1024px;
+$medium-tablet-width: 860px;
+$mobile-width: 600px;
+$sm-mobile-width:300px;
+
+$box-shadow: 0 4px 8px $black-bg;
+
+$colors: (
+    "white": #fff,
+    "black": #111,
+    "goden-yellow": #fccb05,
+    "sun-yellow": #fcd32a,
+    "pinkish-grey-two": #ccc8c6
+);
+
+$numbers: (1,2,3,4,5);

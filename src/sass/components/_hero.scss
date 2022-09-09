@@ -1,0 +1,440 @@
+.hero {
+    position: relative;
+
+    width: 100%;
+
+    background-color: $tomato-bg;
+
+    .container {
+        padding: 120px 10px 100px 10px;
+
+        @include flex(center, center);
+        flex-direction: column;
+    }
+
+    &__launching {
+        font-size: 5rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-style: italic;
+    }
+
+    &__event {
+        margin: 80px 0 85px 0;
+        @include flex(center, center);
+        flex-direction: column;
+
+        &__item {
+            position: relative;
+            @include flex(center, center);
+
+            font-size: 17.15rem;
+            font-weight: bold;
+            text-transform: uppercase;
+
+            color: $txt-white;
+            text-shadow:
+                2px 0 $txt-black,
+                -2px 0 $txt-black,
+                0 2px $txt-black,
+                0 -2px $txt-black,
+                1px 1px $txt-black,
+                -1px -1px $txt-black,
+                1px -1px $txt-black,
+                -1px 1px $txt-black,
+                0 15px $txt-black,
+            ;
+
+
+            &__star {
+                display: inline-block;
+                width: 148px;
+                height: 148px;
+                background-color: yellow;
+                border: 2px solid $black-bg;
+            }
+
+            &__message__box {
+                display: inline-block;
+                width: 348px;
+                height: 195px;
+                background-color: $blue-bg;
+                border-radius: 80px;
+                transform: translateX(-20px);
+                border: 2px solid $black-bg;
+                @include flex(center, center);
+                font-style: italic;
+                font-weight: 900;
+                font-size: 12rem;
+                color: $txt-black;
+                text-shadow: none;
+            }
+
+            &__polygon {
+                display: inline-block;
+                width: 140px;
+                height: 135px;
+                background-color: yellow;
+                transform: translateY(7.5px);
+                border: 2px solid $black-bg;
+            }
+
+            &__thirties {
+                position: absolute;
+                width: 300px;
+                height: 100px;
+                border-radius: 70px;
+                background-color: $blue-bg;
+                transform: rotate(-15deg);
+                right: -50px;
+                top: -50px;
+                border: 2px solid $black-bg;
+                @include flex(center, center);
+                font-style: italic;
+                font-weight: 900;
+                font-size: 4.35rem;
+                color: $txt-white;
+                text-shadow: none;
+            }
+
+        }
+    }
+
+    &__progress {
+        @include flex(center, center);
+
+        font-size: 2rem;
+        color: $txt-black;
+        text-transform: uppercase;
+        font-weight: 900;
+       
+        &__btn {
+            @include flex(center, center);
+            padding: 17px 36px 18px;
+            border-radius: 25.5px;
+            border: solid 3px $black-bg;
+            background-color: $txt-tomato;
+            
+         
+        
+        }
+      
+
+        &__main {
+            margin: 0 140px;
+
+            &__item {
+                position: relative;
+                text-align: center;
+
+                &::after,
+                &::before {
+                    position: absolute;
+                    content: "";
+                    background-color: $black-bg;
+                    width: 169px;
+                    height: 4px;
+                    
+                    
+                }
+
+                &::before {
+                    top: -20px;
+                    left: -50%;
+                    transform: translateX(25%);
+                    
+                    
+                }
+
+                &::after {
+                    bottom: -20px;
+                    left: -50%;
+                    transform: translateX(25%);
+                    
+                }
+
+            }
+            
+            
+
+        }
+
+        &__arrow {
+            font-size: 6.4rem;
+            font-family: 'Noto Sans KR', sans-serif;
+
+            @include flex(center, center);
+            line-height: 100%;
+
+            &__first {
+                margin-left: 77px;
+               
+            }
+
+            &__second {
+                margin-right: 77px;
+                
+                
+            }
+        }
+        
+    }
+
+    
+    
+
+    @include tablet {
+        .container {
+            padding: 100px 10px 80px 10px;
+        }
+
+        &__progress {
+            &__main {
+                margin: 0 40px;
+            }
+
+            &__arrow {
+
+                &__first {
+                    margin-left: 40px;
+                }
+
+                &__second {
+                    margin-right: 40px;
+                }
+            }
+        }
+
+
+    }
+
+    @include large-tablet {
+        .container {
+            padding: 80px 10px 60px 10px;
+        }
+
+        &__launching {
+            font-size: 4.5rem;
+        }
+
+        &__event {
+            &__item {
+                font-size: 12.15rem;
+                text-shadow:
+                    2px 0 $txt-black,
+                    -2px 0 $txt-black,
+                    0 2px $txt-black,
+                    0 -2px $txt-black,
+                    1px 1px $txt-black,
+                    -1px -1px $txt-black,
+                    1px -1px $txt-black,
+                    -1px 1px $txt-black,
+                    0 10px $txt-black,
+                ;
+
+                &__star {
+                    width: 100px;
+                    height: 100px;
+                }
+
+                &__polygon {
+                    width: 100px;
+                    height: 100px;
+
+                }
+
+                &__message__box {
+                    width: 150px;
+                    height: 100px;
+                    font-size: 6rem;
+                }
+
+                &__thirties {
+                    width: 210px;
+                    height: 70px;
+                    font-size: 3rem;
+                }
+            }
+        }
+
+        &__progress {
+            flex-direction: column;
+
+            &__main {
+                margin: 30px 0;
+            }
+
+            &__arrow {
+                font-size: 6.4rem;
+
+
+                @include flex(center, center);
+                line-height: 100%;
+                transform: rotate(90deg);
+
+
+                &__first {
+                    margin-left: unset;
+                    margin-top: 30px;
+                }
+
+                &__second {
+                    margin-bottom: 30px;
+                    margin-right: unset;
+                }
+            }
+        }
+    }
+
+    @include medium-tablet {
+        &__launching {
+            font-size: 2.5rem;
+        }
+
+        &__event {
+            &__item {
+                font-size: 8.15rem;
+                text-shadow:
+                    2px 0 $txt-black,
+                    -2px 0 $txt-black,
+                    0 2px $txt-black,
+                    0 -2px $txt-black,
+                    1px 1px $txt-black,
+                    -1px -1px $txt-black,
+                    1px -1px $txt-black,
+                    -1px 1px $txt-black,
+                    0 7px $txt-black,
+                ;
+
+                &__star {
+                    width: 70px;
+                    height: 70px;
+                }
+
+                &__polygon {
+                    width: 70px;
+                    height: 70px;
+                    transform: translateY(5px);
+                }
+
+                &__message__box {
+                    width: 120px;
+                    height: 80px;
+                    font-size: 4rem;
+                }
+
+                &__thirties {
+                    width: 150px;
+                    height: 50px;
+                    font-size: 2rem;
+                    top: -30px;
+                }
+            }
+        }
+
+    }
+
+    @include mobile {
+        &__launching {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        &__event {
+            &__item {
+                font-size: 5.15rem;
+                text-shadow:
+                    2px 0 $txt-black,
+                    -2px 0 $txt-black,
+                    0 2px $txt-black,
+                    0 -2px $txt-black,
+                    1px 1px $txt-black,
+                    -1px -1px $txt-black,
+                    1px -1px $txt-black,
+                    -1px 1px $txt-black,
+                    0 5px $txt-black,
+                ;
+
+                &__star {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                &__polygon {
+                    width: 40px;
+                    height: 40px;
+                    transform: translateY(2.5px);
+                }
+
+                &__message__box {
+                    transform: translateX(-5px);
+                    width: 70px;
+                    height: 50px;
+                    font-size: 2rem;
+                }
+
+                &__thirties {
+                    width: 90px;
+                    height: 30px;
+                    font-size: 1.5rem;
+                    top: -10px;
+                    right: -20px;
+                }
+            }
+        }
+    }
+
+    @include sm-mobile {
+        &__event {
+            &__item {
+                font-size: 4.2rem;
+                text-shadow:
+                    2px 0 $txt-black,
+                    -2px 0 $txt-black,
+                    0 2px $txt-black,
+                    0 -2px $txt-black,
+                    1px 1px $txt-black,
+                    -1px -1px $txt-black,
+                    1px -1px $txt-black,
+                    -1px 1px $txt-black,
+                    0 3.5px $txt-black,
+                ;
+
+                &__star {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                &__polygon {
+                    width: 40px;
+                    height: 40px;
+                    transform: translateY(2.5px);
+                }
+
+                &__message__box {
+                    transform: translateX(-5px);
+                    width: 60px;
+                    height: 40px;
+                    font-size: 2rem;
+                }
+
+                &__thirties {
+                    width: 60px;
+                    height: 20px;
+                    font-size: 1rem;
+                    top: -10px;
+                    right: -20px;
+                }
+            }
+        }
+
+        ;
+
+        &__progress {
+            &__btn {
+                padding: 10px 18px 10px 18px;
+            }
+        }
+    }
+
+}
