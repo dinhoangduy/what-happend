@@ -2,9 +2,10 @@
 
 # 💡 Description about this project
 
-- Completion time: Almost 24 hours
+## Completion time
+    + Almost 24 hours
 
-- Function:
+## Function:
     + Desktop UI
     + Responsive for Tablet, Mobile
     + Routing using react router dom ( you can  click link in the menu for check)
@@ -19,11 +20,24 @@
     + Animation for button and products
     + Play and pause video in the last section
 
-- Techonologies:
+## Techonologies:
     + React hooks
     + Function component
     + React-router-dom v6
     + Sass
     + ES6
 
+# ✍🏻 Usage
 
+- Clone this project to your computer
+
+- Install dependencies
+    ```npm i 
+    ```
+    or
+    ```npm i  --force
+    ```
+- Run project
+    ```npm run dev 
+    ```
+- Enjoy 🥳
